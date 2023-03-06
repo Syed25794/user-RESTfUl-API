@@ -3,10 +3,14 @@ const bcrypt = require("bcrypt");
 
 const createUser = async ( req, res )=>{
     const { firstName, lastName, email, password, level } = req.body;
+    const isUserExists = await User.findOne({email});
+    if( isUserExists){
+        res.status(404).send({message :"User found in database.Try to login."});
+    }
     try {
         bcrypt.hash(password, 5, function(err, hashedPassword) {
             if( err ){
-                res.status(502).send({"msg":"something went wrong in encrypting password. Please try again later to singup."});
+                res.status(502).send({message:"something went wrong in encrypting password. Please try again later to singup."});
             }else {
                 const newUser = new User({
                     firstName,
