@@ -2,19 +2,13 @@
   "name": "user_restful-api",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-    "server":"nodemon index.js",
+    "server": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Syed25794/user-RESTfUl-API.git"
-  },
-  "dependencies": {
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "mongoose": "^7.0.1"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +17,13 @@
     "url": "https://github.com/Syed25794/user-RESTfUl-API/issues"
   },
   "homepage": "https://github.com/Syed25794/user-RESTfUl-API#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.1"
+  }
 }
